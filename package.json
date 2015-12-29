@@ -1,0 +1,19 @@
+{
+  "name": "movie_app",
+  "version": "1.0.0",
+  "description": "This is SPA based movie search app.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Search",
+    "Movie"
+  ],
+  "author": "Ashwani Kumar Luhaniwal",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.4.8",
+    "bootstrap3": "^3.3.5"
+  }
+}

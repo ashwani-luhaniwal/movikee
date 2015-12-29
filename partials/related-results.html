@@ -1,0 +1,10 @@
+<div ng-if="related.Response!=='False'">
+	Related Results<hr />
+
+	<ul class="related-results">
+		<li ng-repeat="movie in related.Search">
+			<img src="{{ movie.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : movie.Poster }}">
+			<a href="#" id="{{ $index + 1 }}" ng-click="update(movie)">{{ movie.Title }}</a>, {{ movie.Year }}
+		</li>
+	</ul>
+</div>

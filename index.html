@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="MovieApp" ng-controller="MovieController" lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container-fluid outerdiv">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand"><span class="app-title">Movikee</span> <span class="span-style">An OMDb API based Movie Search Engine (Alternative to IMDb Web App)</span></a>
+				</div>
+			</div>
+		</nav>
+
+		<noscript>
+			<div class="jsdisabled">Javascript is either disabled or not supported in your browser. Please enable it or use a Javascript enabled browser.</div>
+		</noscript>
+
+		<div class="animated zoomInRight">
+			<div class="input-group search-bar">
+				<input type="text" ng-model="search" ng-change="change()" onclick="select()" class="form-control" placeholder="Enter full movie name" autofocus>
+				<span class="input-group-addon bar-style"><i class="glyphicon glyphicon-search"></i></span>
+			</div>
+
+			<div id="main-info" ng-include="'partials/main-info.html'" class="col-md-9"></div>
+
+			<div id="related-results" ng-include="'partials/related-results.html'" class="col-md-3 animated bounce related-results"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+</body>
+</html>
