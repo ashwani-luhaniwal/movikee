@@ -3,42 +3,45 @@
 </div>
 
 <div class="movie-block" ng-if="details.Response==='True'">
-	<img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/210x310&text=N/A' : details.Poster }}" class="thumbnail animated flip movie-poster">
-
-	<span class="span-outer">
-		<a href="http://imdb.com/title/{{ details.imdbID }}" target="_blank">{{ details.Title }}</a>
-	</span>, {{ details.Year }}
-
-	<p><strong>Released on:</strong> {{ details.Released }} ({{ details.Runtime }})</p>
-
-	<p>{{ details.Plot }}</p>
-
-	<p class="outer-p">
-		<div class="inner-p">
-			<span class="label label-primary">Directors :</span> {{ details.Director }}
+	<div class="movie-heading"><span class="heading-span">{{ details.Title }}</span></div>
+	<div class="row">
+		<div class="col-md-3">
+			<img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/220x320&text=N/A' : details.Poster }}" class="thumbnail animated flip movie-poster">
 		</div>
-		<div class="inner-p">
-			<span class="label label-primary">Actors :</span> {{ details.Actors }}
-		</div>
-		<div class="inner-p">
-			<span class="label label-primary">Genre :</span> {{ details.Genre }}
-		</div>
-	</p>
+		<div class="col-md-9">
+			<span class="title-span"><a href="http://imdb.com/title/{{ details.imdbID }}" target="_blank">{{ details.Title }}</a><span class="year-span">, {{ details.Year }}</span></span>
 
-	<p class="outer-p-2">Ratings:<br />
-		<strong>IMDb Rating</strong>: <span class="label label-success">{{ details.imdbRating }}</span><br />
-		<strong>Rotten Tomatoes</strong>: <span class="label label-sucess">{{ details.tomatoRating }}</span>
-	</p>
+			<p class="release-info"><strong>Released on:</strong> {{ details.Released }} ({{ details.Runtime }})</p>
 
-	<p class="outer-p-3">
-		<a ng-href="https://www.youtube.com/results?search_query={{ details.Title }}" target="_blank" class="btn btn-default btn-xs btn-info">Watch Trailers!</a>
-		<span class="divider"></span>
-		<a ng-href="http://subscene.com/subtitles/title?q={{ details.Title }}" target="_blank" class="btn btn-default btn-xs btn-info">Get Subtitles!</a>
-		<span class="divider"></span>
-		<a ng-href="http://www.theost.com/search/custom/?key={{ details.Title }}" target="_blank" class="btn btn-default btn-xs btn-info">Hear Soundtracks!</a>
-		<span class="divider"></span>
-		<a ng-href="http://www.amazon.in/s/ref=nb_sb_noss_1?url=search-alias%3Ddvd&field-keywords={{ details.Title }}" target="_blank" class="btn btn-default btn-xs btn-info">Buy this movie!</a>
-	</p>
+			<p class="plot">{{ details.Plot }}</p>
+
+			<div class="directors-list">
+				<span class="label label-primary">Directors :</span> {{ details.Director }}
+			</div>
+			<div class="actors-list">
+				<span class="label label-primary">Actors :</span> {{ details.Actors }}
+			</div>
+			<div class="genre-list">
+				<span class="label label-primary">Genre :</span> {{ details.Genre }}
+			</div>
+
+			<div class="rating-block">
+				<strong>IMDb Rating</strong>: <span class="label label-success">{{ details.imdbRating }}</span>
+				<div class="f-space5"></div>
+				<strong>Rotten Tomatoes</strong>: <span class="label label-danger">{{ details.tomatoRating }}</span>
+			</div>
+
+			<div class="btns">
+				<a ng-href="https://www.youtube.com/results?search_query={{ details.Title }}" target="_blank" class="btn btn-default btn-xs btn-trailers">Watch Trailers</a>
+				<span class="divider"></span>
+				<a ng-href="http://subscene.com/subtitles/title?q={{ details.Title }}" target="_blank" class="btn btn-default btn-xs btn-subtitle">Subtitles</a>
+				<span class="divider"></span>
+				<a ng-href="http://www.theost.com/search/custom/?key={{ details.Title }}" target="_blank" class="btn btn-default btn-xs btn-soundtrack">Soundtracks</a>
+				<span class="divider"></span>
+				<a ng-href="http://www.amazon.in/s/ref=nb_sb_noss_1?url=search-alias%3Ddvd&field-keywords={{ details.Title }}" target="_blank" class="btn btn-default btn-xs btn-amazon">Buy on Amazon</a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div ng-if="details.Response==='False'">

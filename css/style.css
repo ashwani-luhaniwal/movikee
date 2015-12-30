@@ -1,3 +1,11 @@
+body {
+    background-color: #ccc;
+    font-size: 14px;
+}
+.f-space5 {
+    margin-bottom: 5px;
+}
+
 .app-title {
     background-color: #f9ca32;
     border-radius: 5px;
@@ -19,5 +27,115 @@
 .movie-block {
     border: 1px solid #ccc;
     border-radius: 10px;
-    padding: 20px;
+}
+.movie-heading {
+    background: #222 none repeat scroll 0 0;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.movie-heading .heading-span {
+    background-color: #f9ca32;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 2px 8px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+}
+.movie-poster {
+    width: 220px;
+    height: 320px;
+}
+.title-span {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+}
+.title-span a {
+    color: #000;
+}
+.release-info,
+.plot,
+.rating-block {
+    margin: 8px 0;
+}
+.directors-list,
+.actors-list,
+.genre-list {
+    margin: 5px 0;
+}
+.btns {
+    margin: 8px 0;
+}
+.btns .btn-xs {
+    font-size: 18px;
+    padding: 5px 15px;
+}
+.btn-trailers {
+    background-color: #ff4040;
+    border-color: #ff4040;
+    color: #fff;
+}
+.btn-subtitle {
+    background-color: #31698a;
+    border-color: #31698a;
+    color: #fff;
+}
+.btn-soundtrack {
+    background-color: #794044;
+    border-color: #794044;
+    color: #fff;
+}
+.btn-amazon {
+    background-color: #008000;
+    border-color: #008000;
+    color: #fff;
+}
+.divider {
+    margin-left: 15px;
+}
+
+.list-group-item {
+    background-color: #333;
+    padding: 8px 12px;
+}
+.rel-heading {
+    background: #222 none repeat scroll 0 0;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.rel-heading .rel-span {
+    background-color: #f9ca32;
+    border-radius: 5px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 8px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.rel-thumnails {
+    width: 35px;
+}
+.rel-title {
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 5px;
+    color: #fff;
+}
+.rel-year {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+.related-movies ul li a {
+    color: #fff;
+}
+.related-movies ul li a:hover {
+    text-decoration: none;
+    color: #fff;
 }

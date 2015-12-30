@@ -5,7 +5,7 @@ movieApp.controller('MovieController', function($scope, $http) {
 	var requestInfo;
 
 	if ($scope.search === undefined) {
-		$scope.search = "Fashion";
+		$scope.search = "Captain America: The Winter Soldier";
 		fetch();
 	}
 
@@ -20,6 +20,7 @@ movieApp.controller('MovieController', function($scope, $http) {
 		$http.get("http://www.omdbapi.com/?t=" + $scope.search + "&tomatoes=true&plot=full")
 			.success(function(response) {
 				$scope.details = response;
+				// alert($scope.details);
 			});
 
 		$http.get("http://www.omdbapi.com/?s=" + $scope.search)
