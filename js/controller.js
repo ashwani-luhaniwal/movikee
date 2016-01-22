@@ -5,7 +5,7 @@ movieApp.controller('MovieController', function($scope, $http) {
 	var requestInfo;
 
 	if ($scope.search === undefined) {
-		$scope.search = "Captain America: The Winter Soldier";
+		$scope.search = 'Captain America: The Winter Soldier';
 		fetch();
 	}
 
@@ -17,13 +17,13 @@ movieApp.controller('MovieController', function($scope, $http) {
 	};
 
 	function fetch() {
-		$http.get("http://www.omdbapi.com/?t=" + $scope.search + "&tomatoes=true&plot=full")
+		$http.get('http://www.omdbapi.com/?t=' + $scope.search + '&tomatoes=true&plot=full')
 			.success(function(response) {
 				$scope.details = response;
 				// alert($scope.details);
 			});
 
-		$http.get("http://www.omdbapi.com/?s=" + $scope.search)
+		$http.get('http://www.omdbapi.com/?s=' + $scope.search)
 			.success(function(response) {
 				$scope.related = response;
 			});
