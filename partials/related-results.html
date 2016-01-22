@@ -2,7 +2,7 @@
 	<div class="rel-heading"><span class="rel-span">Related Results</span></div>
 	<ul class="related-results list-group">
 		<li class="list-group-item" ng-repeat="movie in related.Search">
-			<img class="rel-thumnails" src="{{ movie.Poster=='N/A' ? 'http://placehold.it/35x35&text=N/A' : movie.Poster }}">
+			<img class="rel-thumnails" ng-src="{{ movie.Poster=='N/A' ? 'http://placehold.it/35x35&text=N/A' : movie.Poster }}">
 			<a class="rel-title" href="#" id="{{ $index + 1 }}" ng-click="update(movie)">{{ movie.Title }}</a><span class="rel-year">, {{ movie.Year }}</span>
 		</li>
 	</ul>
