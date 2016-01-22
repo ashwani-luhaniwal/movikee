@@ -32,9 +32,9 @@ movieApp.controller('MovieController', function($scope, $http) {
 	$scope.update = function(movie) {
 		$scope.search = movie.Title;
 		$scope.change();
-	}
+	};
 
 	$scope.select = function() {
 		this.setSelectionRange(0, this.value.length);
-	}
+	};
 });
