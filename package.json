@@ -4,6 +4,7 @@
   "description": "This is SPA based movie search app.",
   "main": "index.html",
   "scripts": {
+    "start": "http-server .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,5 +16,8 @@
   "dependencies": {
     "angular": "^1.4.8",
     "bootstrap3": "^3.3.5"
+  },
+  "devDependencies": {
+    "http-server": "^0.8.5"
   }
 }
